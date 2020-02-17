@@ -5,6 +5,8 @@ const hbs = require('hbs')
 const geoCode = require('../utils/geoCode');
 const weatherApi = require('../utils/weather');
 
+const port = process.env.PORT || 8000
+
 console.log(__dirname)
 console.log(path.join(__dirname, '../public'));
 
@@ -119,4 +121,4 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(8000, () => { console.log('Server Up and running') });
+app.listen(port, () => { console.log('Server Up and running') });
