@@ -16,7 +16,7 @@ weatherForm.addEventListener('submit', (e) => {
                 errorMessage.textContent = data.error;
             } else {
                 weatherMessage.textContent = 'Location: ' + data.location ;
-                errorMessage.textContent = 'Forcast: ' + data.forecast;
+                errorMessage.textContent = 'Forcast: ' + data.forecast + ' The highest temperature will be '+ data.high +' and lowest temperature will be ' + data.low ;
             }
 
         })

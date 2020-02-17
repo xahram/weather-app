@@ -63,7 +63,7 @@ app.get('/weather', (req, res) => {
                 error: error
             })
         } else {
-            weatherApi(locationProp.long, locationProp.lat, (error, { currentTemperature, rain, forecast }) => {
+            weatherApi(locationProp.long, locationProp.lat, (error, { currentTemperature, rain, forecast ,high,low}) => {
                 if (error) {
                     return res.send({
                         error: error
@@ -74,7 +74,9 @@ app.get('/weather', (req, res) => {
                         rain: rain,
                         forecast: forecast,
                         address: req.query.address,
-                        location: locationProp.location
+                        location: locationProp.location,
+                        low: low,
+                        high
                     });
                 }
             })

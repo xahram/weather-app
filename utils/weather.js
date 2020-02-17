@@ -8,10 +8,13 @@ const weather = (long, lat, callBack) => {
         } else if (body.error) {
             callBack("Wrong Coordinates Put together...", undefined)
         } else {
+            console.log( body.daily.data[0].temperatureHigh)
             callBack(undefined, {
                 currentTemperature: body.currently.temperature,
                 rain: body.currently.precipProbability,
-                forecast: body.daily.data[0].summary
+                forecast: body.daily.data[0].summary,
+                high: body.daily.data[0].temperatureHigh,
+                low: body.daily.data[0].temperatureLow
             })
         }
     })
