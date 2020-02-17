@@ -1,5 +1,3 @@
-console.log('client side file is laoded and it is up and running')
-
 
 const weatherForm = document.querySelector('form')
 const inputForm = document.querySelector('input')
